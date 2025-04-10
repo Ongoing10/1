@@ -1,0 +1,39 @@
+.wrapper {
+    height: 119px;
+    background: linear-gradient(-180deg, #f53d2d, #f63);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    --searchbar-height: 40px;
+    --searchbar-width: 840px;
+}
+
+.inner {
+    height: 100%;
+    width: 1200px;
+}
+
+.top-bar {
+    display: flex;
+    height: 34px;
+    width: 1200px;
+}
+
+.line-gap {
+    width: 1px;
+    height: 50%;
+    border-left: 1px solid hsla(0, 0%, 100%, 0.22);
+    border-right: 1px solid hsla(0, 0%, 100%, 0.22);
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+    position: relative;
+}

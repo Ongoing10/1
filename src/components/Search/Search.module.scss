@@ -1,0 +1,28 @@
+.search-bar {
+    width: var(--searchbar-width);
+    height: var(--searchbar-height);
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: 12px;
+}
+.search-result {
+    width: var(--searchbar-width);
+    padding-right: 60px;
+}
+
+.search-button {
+    width: 60px;
+    height: calc(var(--searchbar-height) - 6px);
+    background-color: #fb5533;
+    outline: 0;
+    overflow: visible;
+    position: relative;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
