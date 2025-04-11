@@ -14,7 +14,7 @@ const cx = classNames.bind(styles);
 function Search() {
     const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
-    const [showSearchResult, setShowSearchResult] = useState(true);
+    const [showSearchResult, setShowSearchResult] = useState(false);
 
     const currentUser = true;
 
@@ -33,9 +33,9 @@ function Search() {
             })
 
             .then((res) => {
-                console.log(res.data);
+                console.log(res.data[0].nameProduct);
 
-                setSearchResult(res.data.nameProduct || []);
+                setSearchResult(res.data[0].nameProduct || []);
             });
     }, [debounced]);
 
@@ -44,16 +44,26 @@ function Search() {
             <Tippy
                 interactive
                 appendTo={() => document.body}
-                visible={showSearchResult && searchResult.length > 0}
+                visible={showSearchResult}
                 placement="bottom"
                 render={(attrs) => (
-                    <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+                    <div className="w-[840px] bg-white" tabIndex="-1" {...attrs}>
                         <PopperWrapper>
-                            <div className="flex gap-3 p-5">
-                                <ShopIconSearchBar />
-                                <p>Tìm Shop</p>
-                                <span>"{searchResult}"</span>
-                            </div>
+                            {searchValue.trim() === '' ? (
+                                <div className="flex gap-3 p-5">
+                                    <ul>
+                                        <li>Sp1</li>
+                                        <li>Sp1</li>
+                                        <li>Sp1</li>
+                                    </ul>
+                                </div>
+                            ) : (
+                                <div className="flex gap-3 p-5">
+                                    <ShopIconSearchBar />
+                                    <p>Tìm Shop</p>
+                                    <span>"{searchValue}"</span>
+                                </div>
+                            )}
                         </PopperWrapper>
                     </div>
                 )}
@@ -62,7 +72,7 @@ function Search() {
                 }}
             >
                 <div>
-                    <div className={cx('search-bar')}>
+                    <div className="relative w-[840px] h-[40px] bg-white text-black flex items-center mt-[12px] mb-[5px] ">
                         <div className="w-full flex p-2">
                             <input
                                 value={searchValue}

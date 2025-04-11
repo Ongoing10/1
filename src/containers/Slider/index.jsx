@@ -81,34 +81,13 @@ function Slider() {
 
                 <div className="absolute">
                     <div className="bottom-0 mb-2 inset-x-0 flex justify-center gap-2 z-60">
-                        <span
-                            className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer"
-                            onClick="jumpToSlide(0)"
-                        />
-                        <span
-                            className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer"
-                            onClick="jumpToSlide(1)"
-                        />
-                        <span
-                            className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer"
-                            onClick="jumpToSlide(2)"
-                        />
-                        <span
-                            className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer"
-                            onClick="jumpToSlide(3)"
-                        />
-                        <span
-                            className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer"
-                            onClick="jumpToSlide(4)"
-                        />
-                        <span
-                            className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer"
-                            onClick="jumpToSlide(5)"
-                        />
-                        <span
-                            className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer"
-                            onClick="jumpToSlide(6)"
-                        />
+                        <span className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer" />
+                        <span className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer" />
+                        <span className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer" />
+                        <span className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer" />
+                        <span className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer" />
+                        <span className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer" />
+                        <span className="dot w-3 h-3 rounded-full bg-gray-200 cursor-pointer" />
                     </div>
                 </div>
 

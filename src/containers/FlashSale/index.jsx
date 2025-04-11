@@ -30,9 +30,6 @@ function FlashSale() {
         fetchData();
     }, []);
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error}</p>;
-
     const renderMainList = (datas) =>
         datas.map((data, index) => {
             const { href, bubbleImage, frameImage, price, selledStatus, selledPartWidthPercent, saleOffPercent } = data;
